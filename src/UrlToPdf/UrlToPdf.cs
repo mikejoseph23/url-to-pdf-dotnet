@@ -2,9 +2,9 @@
 using System.Configuration;
 using System.Diagnostics;
 using System.IO;
-using UrlToPdf.Models;
+using UrlToPdf.Core.Models;
 
-namespace UrlToPdf
+namespace UrlToPdf.Core
 {
     public static class UrlToPdf
     {
@@ -17,8 +17,8 @@ namespace UrlToPdf
             InstallNodeModules(workingDirectory, retVal);
 
             var conversionStartTime = DateTime.UtcNow;
+            if (File.Exists(savePath)) File.Delete(savePath);
             ConvertUrlToPdfUsingNode(url, savePath, workingDirectory);
-
             retVal.ConversionTimeTakenSeconds = (DateTime.UtcNow - conversionStartTime).TotalSeconds;
             retVal.OutputFilePath = savePath;
             retVal.EndTime = DateTime.UtcNow;
@@ -35,7 +35,8 @@ namespace UrlToPdf
                 {
                     FileName = exePath,
                     Arguments = $"urlToPdf.js {url} {savePath}",
-                    WorkingDirectory = workingDirectory
+                    WorkingDirectory = workingDirectory,
+                    WindowStyle = ProcessWindowStyle.Hidden
                 }
             };
 
@@ -52,7 +53,8 @@ namespace UrlToPdf
                 StartInfo =
                 {
                     FileName = ConfigurationManager.AppSettings["UrlToPdf.NpmOrYarnPath"],
-                    WorkingDirectory = workingDirectory
+                    WorkingDirectory = workingDirectory,
+                    WindowStyle = ProcessWindowStyle.Hidden
                 },
             };
 

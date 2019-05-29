@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NodeJs", "NodeJs", "{90B331
 		NodeJs\urlToPdf.js = NodeJs\urlToPdf.js
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlToPdf", "UrlToPdf\UrlToPdf.csproj", "{615D42F5-EA2D-41CC-90EF-CAE3A28065A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlToPdf.Core", "UrlToPdf\UrlToPdf.Core.csproj", "{615D42F5-EA2D-41CC-90EF-CAE3A28065A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlToPdf.Console", "UrlToPdf.Console\UrlToPdf.Console.csproj", "{1A7318C1-06E5-4CB0-A753-A1B77BE8939C}"
 EndProject

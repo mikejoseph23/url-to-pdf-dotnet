@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UrlToPdf.Models
+namespace UrlToPdf.Core.Models
 {
     public class UrlToPdfResult
     {
