@@ -6,7 +6,7 @@ using UrlToPdf.Models;
 
 namespace UrlToPdf
 {
-    public class UrlToPdf
+    public static class UrlToPdf
     {
         public static UrlToPdfResult Convert(string url, string savePath)
         {

@@ -42,14 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\UrlToPdfResult.cs" />
     <Compile Include="UrlToPdf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\UrlToPdf.Models\UrlToPdf.Models.csproj">
-      <Project>{5D63F4C7-3B34-4E5D-903B-17B5724B35E9}</Project>
-      <Name>UrlToPdf.Models</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
