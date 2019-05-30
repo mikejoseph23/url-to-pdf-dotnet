@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlToPdf.Core", "UrlToPdf\U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlToPdf.Console", "UrlToPdf.Console\UrlToPdf.Console.csproj", "{1A7318C1-06E5-4CB0-A753-A1B77BE8939C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NodeJs", "NodeJs", "{82D5E95B-6178-4FD0-9908-44EF836A7EB4}"
+	ProjectSection(SolutionItems) = preProject
+		NodeJs\package.json = NodeJs\package.json
+		NodeJs\urlToPdf.js = NodeJs\urlToPdf.js
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

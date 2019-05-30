@@ -13,12 +13,13 @@ namespace UrlToPdf.Core
             var retVal = new UrlToPdfResult {StartTime = DateTime.UtcNow};
             var nodeJsScriptPath = ConfigurationManager.AppSettings["UrlToPdf.NodeJsFilePath"];
             var workingDirectory = Path.GetDirectoryName(nodeJsScriptPath);
+            var nodeJsScriptFile = Path.GetFileName(nodeJsScriptPath);
             Debug.Assert(workingDirectory != null, nameof(workingDirectory) + " != null");
             InstallNodeModules(workingDirectory, retVal);
 
             var conversionStartTime = DateTime.UtcNow;
             if (File.Exists(savePath)) File.Delete(savePath);
-            ConvertUrlToPdfUsingNode(url, savePath, workingDirectory);
+            ConvertUrlToPdfUsingNode(url, savePath, workingDirectory, nodeJsScriptFile);
             retVal.ConversionTimeTakenSeconds = (DateTime.UtcNow - conversionStartTime).TotalSeconds;
             retVal.OutputFilePath = savePath;
             retVal.EndTime = DateTime.UtcNow;
@@ -26,7 +27,7 @@ namespace UrlToPdf.Core
             return retVal;
         }
 
-        private static void ConvertUrlToPdfUsingNode(string url, string savePath, string workingDirectory)
+        private static void ConvertUrlToPdfUsingNode(string url, string savePath, string workingDirectory, string nodeJsScriptFile)
         {
             var exePath = ConfigurationManager.AppSettings["UrlToPdf.NodeJsExecutablePath"];
             var process = new Process
@@ -34,7 +35,7 @@ namespace UrlToPdf.Core
                 StartInfo =
                 {
                     FileName = exePath,
-                    Arguments = $"urlToPdf.js {url} {savePath}",
+                    Arguments = $"{nodeJsScriptFile} {url} {savePath}",
                     WorkingDirectory = workingDirectory,
                     WindowStyle = ProcessWindowStyle.Hidden
                 }
