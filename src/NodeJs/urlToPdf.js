@@ -2,7 +2,7 @@
 
 async function printPDF () {
   const browser = await puppeteer.launch({ 
-	headless: true
+	headless: true,
 	// executablePath: './node_modules/puppeteer/.local-chromium/win64-662092/chrome-win/chrome.exe' 
   });
   
