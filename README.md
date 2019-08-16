@@ -1,5 +1,5 @@
 # url-to-pdf-dotnet
-Converts a Web Page to a PDF File - .NET C# Library made using NodeJs and Puppeteer
+Converts a Web Page to a PDF File - .NET C# Library made using PuppeteerSharp. http://puppeteersharp.com
 
 ## About UrlToPdf-DotNet
 A very common requirement for many of my clients is to provide printable web pages in the form of a PDF document. Why not just instruct the user to use their browser's print option? There are a few reasons:
@@ -12,13 +12,7 @@ Over the years, I have used many commercially available components that I've use
 This project is free to anyone who finds it useful. Hopefully it will save someone lots of money and headaches!
 
 ## Getting Started
-
-1. Install Prerequisites
-  - NodeJs
-  - Yarn (optional) - You can use NPM instead if you'd rather.
-2. Clone this repository.
-3. Edit App.config to reflect local file paths.
-4. To be continued...
+If anyone other than me uses this, I'll fill this in.
 
 ## Roadmap / Desired features
 - Read the converted PDF into a MemoryStream eliminating the need for the filesystem for output.

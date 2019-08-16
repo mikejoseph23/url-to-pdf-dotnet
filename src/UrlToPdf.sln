@@ -3,14 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlToPdf.Core", "UrlToPdf\UrlToPdf.Core.csproj", "{615D42F5-EA2D-41CC-90EF-CAE3A28065A1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlToPdf.Console", "UrlToPdf.Console\UrlToPdf.Console.csproj", "{1A7318C1-06E5-4CB0-A753-A1B77BE8939C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NodeJs", "NodeJs", "{82D5E95B-6178-4FD0-9908-44EF836A7EB4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root Items", "Root Items", "{63D3854B-0159-4B0A-B78A-E14925B03CDB}"
 	ProjectSection(SolutionItems) = preProject
-		NodeJs\package.json = NodeJs\package.json
-		NodeJs\urlToPdf.js = NodeJs\urlToPdf.js
+		..\.gitignore = ..\.gitignore
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Global
@@ -19,10 +18,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{615D42F5-EA2D-41CC-90EF-CAE3A28065A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{615D42F5-EA2D-41CC-90EF-CAE3A28065A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{615D42F5-EA2D-41CC-90EF-CAE3A28065A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{615D42F5-EA2D-41CC-90EF-CAE3A28065A1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1A7318C1-06E5-4CB0-A753-A1B77BE8939C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1A7318C1-06E5-4CB0-A753-A1B77BE8939C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A7318C1-06E5-4CB0-A753-A1B77BE8939C}.Release|Any CPU.ActiveCfg = Release|Any CPU

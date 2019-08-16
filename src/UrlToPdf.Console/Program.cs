@@ -5,6 +5,10 @@ using CommandLine;
 
 namespace UrlToPdf.Console
 {
+    /// <summary>
+    /// Handy Reference Pages: https://chromedevtools.github.io/devtools-protocol/tot/Page
+    /// and: https://pptr.dev/#?product=Puppeteer&version=v1.17.0&show=api-pagepdfoptions
+    /// </summary>
     class Program
     {
         public class Options
