@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using CommandLine;
 using PuppeteerSharp;
 using PuppeteerSharp.Media;
-using CommandLine;
+using System.Threading.Tasks;
 
 namespace UrlToPdf.Console
 {
@@ -46,7 +46,7 @@ namespace UrlToPdf.Console
         public static async Task Start(Options options)
         {
             await new BrowserFetcher().DownloadAsync(BrowserFetcher.DefaultRevision);
-            var launchOptions = new LaunchOptions { Headless = true, IgnoreHTTPSErrors = true };
+            var launchOptions = new LaunchOptions { Headless = false, IgnoreHTTPSErrors = true };
             var browser = await Puppeteer.LaunchAsync(launchOptions);
 
             var page = await browser.NewPageAsync();
